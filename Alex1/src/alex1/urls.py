@@ -20,7 +20,6 @@ from django.conf.urls.static import static
 
 from profiles import views as profiles_views
 
-###This is where i was last ediyinh@! 40.0.01
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', profiles_views.base, name='base'),

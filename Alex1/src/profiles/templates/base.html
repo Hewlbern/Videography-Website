@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
@@ -503,7 +504,7 @@
                                     <div class="slider-wrap">
                                         <div class="slide">
                                             <div class="testi-content">
-                                                <p>MDG's videography and marketing knowledge increased our customers in down periods significantly.</p>
+                                                <p>MDG's videography and marketing knowledge has transformed our brand.</p>
                                                 <div class="testi-meta">
 
                                                     <span>Tusk Cafe</span>
@@ -512,7 +513,7 @@
                                         </div>
                                         <div class="slide">
                                             <div class="testi-content">
-                                                <p>Our new video's have increased our customer retention and acquisitions 30%+ since incorporating them into our sales funnel.</p>
+                                                <p>MDG's videography have lower our customer acquisitions cost by 30%.</p>
                                                 <div class="testi-meta">
                                                     The Owner
                                                     <span>WagglyClub</span>
@@ -521,7 +522,7 @@
                                         </div>
                                         <div class="slide">
                                             <div class="testi-content">
-                                                <p>MDG attention to detail have led me to not only better visibility to my customers but also a better understanding of how I can approach them.</p>
+                                                <p>With MDG's help I doubled my weekly leads.</p>
                                                 <div class="testi-meta">
                                                     John Smith
                                                     <span>Ripped Incorporated</span>
@@ -588,68 +589,32 @@
                     </div>
                 </div>
 
+            <div class="container clearfix">
+                <div class="divcenter topmargin" style="max-width: 850px;">
+                    <div class="contact-widget">
+                        {% if confirm_message %}
+                        <h1>{{ confirm_message }}</h1>
+                        {% endif %}
+                        {% if form %}
 
-
-                <div class="container clearfix">
-
-                    <div class="divcenter topmargin" style="max-width: 850px;">
-
-                        <div class="contact-widget">
-
-                            <div class="contact-form-result"></div>
-
-                            <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
-
-                                <div class="form-process"></div>
-
-                                <div class="col_half">
-                                    <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Name" />
-                                </div>
-                                <div class="col_half col_last">
-                                    <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Email Address" />
-                                </div>
-
-                                <div class="clear"></div>
-
-                                <div class="col_one_third">
-                                    <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control" placeholder="Phone" />
-                                </div>
-
-                                <div class="col_two_third col_last">
-                                    <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control border-form-control" placeholder="Subject" />
-                                </div>
-
-                                <div class="clear"></div>
-
-                                <div class="col_full">
-                                    <textarea class="required sm-form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Your Message"></textarea>
-                                </div>
-
-                                <div class="col_full center">
-                                    <button class="button button-border button-circle t500 noleftmargin topmargin-sm" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
-                                    <br>
-                                    <small style="display: block; font-size: 13px; margin-top: 15px;">We'll do our best to get back to you within 6-8 working hours.</small>
-                                </div>
-
-                                <div class="clear"></div>
-
-                                <div class="col_full hidden">
-                                    <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-                                </div>
-
-                            </form>
-
-                        </div>
-
+                        <form class="nobottommargin" id="template-contactform" name="template-contactform" method="POST" action = ''>
+                            {% csrf_token %}
+                            {{form|crispy}}
+                            <input type='submit' value="submit form" class="button button-border button-circle t500 noleftmargin topmargin-sm"/>
+                            <small style="display: block; font-size: 13px; margin-top: 15px;">{{title}}</small>
+                        </form>
                     </div>
 
+                    <div class="clear"></div>
+                    <!-- Contact Info -->
+                        {% endif%}
+                    </div>
                 </div>
 
+                <!-- Contact Info End -->
             </div>
 
-        </div>
-
-    </section><!-- #content end -->
+                <!-- #content end -->
 
     <!-- Footer
     ============================================= -->
@@ -737,7 +702,7 @@
 <!-- Go To Top
 ============================================= -->
 <div id="gotoTop" class="icon-angle-up"></div>
-============================================= -->
+<!-- ============================================= -->
 <script type="text/javascript" src="{% static 'javascript/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'javascript/plugins.js' %}"></script>
 <!-- Footer Scripts

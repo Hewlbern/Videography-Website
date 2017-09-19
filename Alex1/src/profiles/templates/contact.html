@@ -1,0 +1,66 @@
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+            <div class="col_half">
+                <div class="fancy-title title-dotted-border">
+                    <h3>{{title}}</h3>
+                </div>
+                {% if confirm_message %}
+
+                <h1>{{ confirm_message }}</h1>
+                    {% endif %}
+                    {% if form %}
+
+                <form class="nobottommargin" id="template-contactform" name="template-contactform" method="POST" action = ''>
+                        {% csrf_token %}
+                        {{form|crispy}}
+                    <input type='submit' value="submit form" class="sm-form-control required"/>
+                </form>
+            </div>
+
+            <div class="clear"></div>
+            <!-- Contact Info -->
+            <div class="row clear-bottommargin">
+                <div class="col-md-3 col-sm-6 bottommargin clearfix">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-map-marker2"></i></a>
+                        </div>
+                        <h3>Our Headquarters<span class="subtitle">Melbourne, Australia</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 bottommargin clearfix">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-phone3"></i></a>
+                        </div>
+                        <h3>Speak to Us<span class="subtitle"> 0421 599 796</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 bottommargin clearfix">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-skype2"></i></a>
+                        </div>
+                        <h3>Make a Video Call<span class="subtitle">MelbourneDigitalGroup</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 bottommargin clearfix">
+                    <div class="feature-box fbox-center fbox-bg fbox-plain">
+                        <div class="fbox-icon">
+                            <a href="#"><i class="icon-twitter2"></i></a>
+                        </div>
+                        <h3>Follow on Twitter<span class="subtitle">2.3M Followers</span></h3>
+                    </div>
+                </div>
+                {% endif%}
+            </div><!-- Contact Info End -->
+            </div>
+            </div>
+</section><!-- #content end -->
+
+{% endblock %}
+

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ef7317a-97ad-4ed0-a1d8-0f73791caa55" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Alex1/Procfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Alex1/requirements.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6ef7317a-97ad-4ed0-a1d8-0f73791caa55" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -438,12 +434,12 @@
       <workItem from="1506347867399" duration="738000" />
       <workItem from="1506403221953" duration="1584000" />
       <workItem from="1506437532282" duration="1060000" />
-      <workItem from="1507100651580" duration="4217000" />
+      <workItem from="1507100651580" duration="4822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81590000" />
+    <option name="totallyTimeSpent" value="82195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,7 +452,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="840" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12174479" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
